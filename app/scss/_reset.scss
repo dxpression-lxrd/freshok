@@ -51,13 +51,20 @@ select {
 a {
   color: inherit;
   display: inline-block;
+  text-decoration: none;
+}
+
+
+
+button,
+input {
+  border: none;
 }
 
 button {
-  border: none;
-  padding: 0;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
 }
 
 address {
