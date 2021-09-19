@@ -11,3 +11,49 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #ffffff;
 $white-hover: rgba(255, 255, 255, 0.1);
+$btn-hover: rgba(49, 53, 43, 0.85);
+$btn-active: rgba(0, 0, 0, 0.25);
+$btn-focus: rgba(255, 255, 255, 0.5);
+$catalog-active: #E0EDCF;
+$slider__bg: rgba(255, 255, 255, 0.8);
+
+
+%opensans-300 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+%opensans-400 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+%opensans-600 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+%opensans-700 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+%ruda-400 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 400;
+}
+
+%ruda-600 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 600;
+}
+
+%ruda-700 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 700;
+}
+
+%ruda-900 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 900;
+}
