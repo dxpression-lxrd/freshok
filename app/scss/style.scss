@@ -11,7 +11,6 @@
     color: $white;
     font-size: 13px;
     font-weight: 700;
-    line-height: 1.4;
     text-transform: uppercase;
   }
 
@@ -91,7 +90,6 @@
   &__bottom {
     padding: 25px 0;
     background-color: $green-900;
-    line-height: 1.4;
     font-size: 14px;
   }
 
@@ -134,7 +132,7 @@
 
     &:hover,
     &:active {
-      background-color: $catalog-active;
+      background-color: $green-200;
     }
   }
 
@@ -154,7 +152,6 @@
     padding: 15px 160px 15px 51px;
     color: $dark-800;
     outline: transparent;
-    line-height: 1.4;
     font-weight: 400;
     letter-spacing: 0.03em;
   }
@@ -204,7 +201,7 @@
     }
 
     &:focus {
-      box-shadow: 0px 0px 0px 4px $btn-focus;
+      box-shadow: inset 0px 4px 4px $btn-active, 0px 0px 0px 4px $btn-focus;
     }
   }
 }
@@ -299,20 +296,16 @@
 
   &__description {
     color: $dark-500;
-    line-height: 1.4;
     margin-bottom: 23px;
+    font-weight: 400;
   }
 
   // .slider__link
 
-  &__link {
-    font-size: 18px;
-    line-height: 1.3;
+  &__btn {
     letter-spacing: 0.03em;
-    padding: 12px 24px;
-    color: $white;
-    background-color: $green-900;
-    border-radius: 6px;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    outline: transparent;
   }
 
   &__arrow-left,
@@ -325,8 +318,9 @@
     padding: 14px 21px;
     background-color: $slider__bg;
     border-radius: 6px;
+    cursor: pointer;
   }
-  
+
   &__arrow-left {
     left: 60px;
   }
@@ -336,6 +330,288 @@
   }
 }
 
+
+.advantages {
+
+  padding: 48px 0 29px;
+  background-color: $silver-100;
+  // .advantages__list
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0;
+  }
+
+  // .advantages__item
+
+  &__item {
+    max-width: 264px;
+    width: 100%;
+    padding-left: 74px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 65px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  // .advantages__item--delivery
+
+  &__item--delivery::before {
+    background-image: url('../images/advantages/scooter.svg')
+  }
+
+  // .advantages__item--return
+
+  &__item--return::before {
+    background-image: url('../images/advantages/return-box.svg')
+  }
+
+  // .advantages__item--support
+
+  &__item--support::before {
+    background-image: url('../images/advantages/24-hours.svg')
+  }
+
+  // .advantages__title
+
+  &__title {
+    margin-bottom: 6px;
+  }
+
+  // .advantages__description
+
+  &__description {
+    font-size: 14px;
+    color: $dark-500;
+    font-weight: 400;
+  }
+}
+
+
+.best-goods {
+  padding-top: 72px;
+
+  &__title {
+    text-align: center;
+  }
+
+  // .best-goods__filter
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  // .best-goods__item
+
+  &__item {
+    @extend %opensans-700;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  // .best-goods__btn
+
+  &__btn {
+    text-transform: uppercase;
+    color: $dark-500;
+    font-size: 15px;
+
+    &:hover {
+      border-bottom: 3px solid $green-200;
+    }
+  }
+
+  // .best-goods__inner
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 47px;
+  }
+
+  .mixitup-control-active {
+    border-bottom: 3px solid $green-200;
+  }
+
+  &__button {
+    background-color: transparent;
+    color: $green-900;
+    border: 1px solid $green-900;
+    margin: 0 auto;
+    display: block;
+
+    &:hover {
+      background-color: $green-100;
+    }
+  
+    &:active {
+      box-shadow: inset 0px 4px 4px $btn-active;
+    }
+  
+    &:focus {
+      box-shadow: inset 0px 4px 4px $btn-active, 0px 0px 0px 4px $product-card-btn;
+    }
+  }
+}
+.product-card {
+  max-width: 300px;
+  width: 100%;
+  border: 1px solid $product-card;
+  border-radius: 6px;
+  position: relative;
+  padding-top: 56px;
+  transition: border 0.5s;
+
+  &:hover {
+    border: 1px solid $green-900;
+  }
+
+  // .product-card__label-wrapper
+
+  &__badges {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
+
+  &__badge {
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    padding: 3px 6px;
+    border-radius: 6px;
+    align-self: flex-start;
+    text-transform: uppercase;
+    color: $white;
+
+    &--new {
+      background-color: $green-900;
+    }
+
+    &--sale {
+      background-color: $red-900;
+    }
+
+    &--hit {
+      background-color: $orange-900;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  // .product-card__wish-btn
+
+  &__wish-btn {
+    background-image: url('../images/icons/icon-heart.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 32px;
+    height: 29px;
+    position: absolute;
+    top: 17px;
+    right: 12px;
+  }
+
+  // .product-card__name
+
+  &__name {
+    margin-bottom: 17px;
+    font-size: 14px;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // .product-card__bottom
+
+  &__bottom {
+    padding: 9px 18px 18px;
+    position: relative;
+  }
+
+  // .product-card__price
+
+  &__price {
+    position: relative;
+    font-size: 14px;
+    color: $dark-500;
+  }
+
+  // .product-card__old-price
+
+  &__old-price {
+    position: absolute;
+    bottom: 17px;
+    color: $silver-600;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 9px;
+      background-color: $silver-600;
+      transform: rotate(-15deg);
+    }
+  }
+
+  // .product-card__buy-btn
+
+  &__buy-btn {
+    width: 32px;
+    height: 32px;
+    background-color: $green-900;
+    position: absolute;
+    border-radius: 3px;
+    right: 18px;
+    bottom: 18px;
+    transition: background-color 0.5s;
+    @extend %btn-fortunes;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url('../images/icons/icon-cart.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto
+    }
+  }
+}
 
 
 

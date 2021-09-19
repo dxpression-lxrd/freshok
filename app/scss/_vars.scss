@@ -12,11 +12,12 @@ $silver-100: #F6F6F6;
 $white: #ffffff;
 $white-hover: rgba(255, 255, 255, 0.1);
 $btn-hover: rgba(49, 53, 43, 0.85);
-$btn-active: rgba(0, 0, 0, 0.25);
 $btn-focus: rgba(255, 255, 255, 0.5);
-$catalog-active: #E0EDCF;
 $slider__bg: rgba(255, 255, 255, 0.8);
-
+$buy-hover: #4D800C;
+$btn-active: rgba(0, 0, 0, 0.25);
+$product-card: rgba(17, 17, 17, 0.2);
+$product-card-btn: rgba(99, 166, 14, 0.5);
 
 %opensans-300 {
   font-family: 'Open Sans', sans-serif;
@@ -57,3 +58,28 @@ $slider__bg: rgba(255, 255, 255, 0.8);
   font-family: 'Ruda', sans-serif;
   font-weight: 900;
 }
+
+%title {
+  font-size: 32px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  @extend %ruda-600;
+  margin-bottom: 30px;
+}
+
+%btn-fortunes {
+  
+    &:hover {
+      background-color: $buy-hover;
+    }
+  
+    &:active {
+      box-shadow: inset 0px 4px 4px $btn-active;
+    }
+  
+    &:focus {
+      box-shadow: inset 0px 4px 4px $btn-active, 0px 0px 0px 4px $green-200;
+    }
+}
+
+
