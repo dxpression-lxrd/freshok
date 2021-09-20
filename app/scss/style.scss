@@ -254,7 +254,6 @@
   }
 }
 
-
 .slider {
 
   position: relative;
@@ -298,6 +297,7 @@
     color: $dark-500;
     margin-bottom: 23px;
     font-weight: 400;
+    font-size: 16px;
   }
 
   // .slider__link
@@ -329,7 +329,6 @@
     right: 60px;
   }
 }
-
 
 .advantages {
 
@@ -390,6 +389,7 @@
 
   &__title {
     margin-bottom: 6px;
+    font-size: 16px;
   }
 
   // .advantages__description
@@ -400,7 +400,6 @@
     font-weight: 400;
   }
 }
-
 
 .best-goods {
   padding-top: 72px;
@@ -462,16 +461,17 @@
     &:hover {
       background-color: $green-100;
     }
-  
+
     &:active {
       box-shadow: inset 0px 4px 4px $btn-active;
     }
-  
+
     &:focus {
       box-shadow: inset 0px 4px 4px $btn-active, 0px 0px 0px 4px $product-card-btn;
     }
   }
 }
+
 .product-card {
   max-width: 300px;
   width: 100%;
@@ -525,15 +525,25 @@
   // .product-card__wish-btn
 
   &__wish-btn {
-    background-image: url('../images/icons/icon-heart.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    // background-image: url('../images/icons/icon-heart.svg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
     width: 32px;
     height: 29px;
     position: absolute;
     top: 17px;
     right: 12px;
+
+    path {
+      transition: fill 0.3s;
+    }
+
+    &:hover {
+      path {
+        fill: $yellow-900;
+      }
+    }
   }
 
   // .product-card__name
@@ -613,6 +623,119 @@
   }
 }
 
+
+.footer {
+  padding: 30px 0 0;
+  background-color: $dark-800;
+  color: $white;
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__top {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $white-hover; 
+  }
+  // .footer__inner
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .footer__form
+
+  &__form {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__label {
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  // .footer__input
+
+  &__input {
+    max-width: 298px;
+    width: 100%;
+    padding: 12px 120px 12px 12px;
+    border-radius: 6px;
+    line-height: 1;
+    max-height: 40px;
+    outline: transparent;
+    font-size: 14px;
+    color: $placeholder-color;
+  }
+
+  &__btn {
+    padding: 13px 10px 12px 14px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    border-radius: 0px 6px 6px 0px;
+  }
+
+  // .footer__item
+
+  &__item {
+    font-weight: 400;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .footer__list-item
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  // .footer__link
+
+  &__social-link:active {
+    opacity: 0.7;
+  }
+
+  // .footer__social
+
+  &__social {
+    display: flex;
+  }
+
+  // .footer__social-icon
+
+  &__social-icon:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+  }
+
+  // .footer__copyrith
+
+  &__copyrith {}
+
+  &__payment {
+    display: flex;
+    li:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}
 
 
 
