@@ -37,7 +37,7 @@
       }
 
       .header__link {
-        
+
         &::before {
           content: "";
           position: absolute;
@@ -53,16 +53,16 @@
 
         &--address {
           padding-left: 45px;
-    
+
           &::before {
             background-image: url('../images/header/icon-del-address.svg');
             width: 32px;
           }
         }
-    
+
         &--tel {
           padding-left: 34px;
-    
+
           &::before {
             background-image: url('../images/header/icon-tel.svg');
             width: 22px;
@@ -314,10 +314,30 @@
     bottom: 0;
     margin: auto 0;
     z-index: 10;
-    padding: 14px 21px;
-    background-color: $slider__bg;
-    border-radius: 6px;
     cursor: pointer;
+    border-radius: 6px;
+    transition: box-shadow 0.3s;
+    outline: transparent;
+
+    rect,
+    path {
+      transition: fill 0.5s, stroke 0.5s;
+    }
+
+    &:hover {
+      rect {
+        fill: $green-200;
+        stroke: $green-900;
+      }
+
+      path {
+        fill: $green-900;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $product-card-btn;
+    }
   }
 
   &__arrow-left {
@@ -368,15 +388,15 @@
     &--delivery::before {
       background-image: url('../images/advantages/scooter.svg')
     }
-  
+
     // .advantages__item--return
-  
+
     &--return::before {
       background-image: url('../images/advantages/return-box.svg')
     }
-  
+
     // .advantages__item--support
-  
+
     &--support::before {
       background-image: url('../images/advantages/24-hours.svg')
     }
@@ -684,7 +704,7 @@
     &:not(:last-child) {
       margin-bottom: 18px;
     }
-  
+
   }
 
   &__contact {
@@ -724,4 +744,79 @@
       margin-right: 24px;
     }
   }
+}
+
+.banner {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 32px;
+    border-radius: 6px;
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $dark-500;
+    letter-spacing: 0;
+
+    &--modified {
+      max-width: 630px;
+      background-color: $fruits-bg;
+      color: $white;
+      background-position: right center;
+
+      .banner__subtitle,
+      .banner__link {
+        text-shadow: 1px 1px 0 $btn-active;
+      }
+
+      .banner__title {
+        text-shadow: 2px 2px 0 $btn-active;
+        max-width: 351px;
+      }
+    }
+
+
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-family: $Ruda;
+    font-size: 30px;
+    margin-bottom: 12px;
+    max-width: 200px;
+  }
+
+  &__link {
+    align-self: flex-start;
+    padding-bottom: 6px;
+    border-bottom: 2px solid;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $orange-900;
+    }
+  }
+
+  &__subtitle,
+  &__link {
+    line-height: 1;
+  }
+
 }
