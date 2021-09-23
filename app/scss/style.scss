@@ -632,8 +632,9 @@
 .banner {
 
   &__list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 630px repeat(2, 1fr);
+    grid-column-gap: 30px;
     text-transform: uppercase;
   }
 
@@ -706,13 +707,15 @@
 
 .stock {
 
+  background-color: $stock-bg;
+  padding: 72px 0;
   // .stock__list
 
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 48px;
   }
 
   // .stock__item
@@ -724,6 +727,7 @@
       height: 124px;
       display: grid;
       grid-template-columns: 111px 1fr;
+      background-color: $white;
 
       &__image {
         margin-right: 12px;
@@ -799,6 +803,116 @@
   &__btn {
     display: block;
     margin: 0 auto;
+  }
+}
+
+.brands {
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__link {
+    g {
+      transition: opacity 0.5s;
+    }
+
+    &:hover {
+      g {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.news {
+
+  &__top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__all-news {
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0;
+    color: $green-900;
+    font-weight: 700;
+    padding-bottom: 6px;
+    border-bottom: 2px solid;
+    position: relative;
+    bottom: 7px;
+    transition: color 0.5s;
+
+    &:hover,
+    &:active {
+      color: $buy-hover;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
+
+  &__item{
+    border-radius: 6px;
+    box-shadow: 0 3px 3px $btn-active;
+    position: relative;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.05);
+
+      .news__text {
+        color: $green-900;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+    background-image: url('../images/news/item-bg.jpg');
+  }
+
+  &__date {
+    position: absolute;
+    left: 20px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 0 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 65px;
+    height: 76px;
+    border-radius: 0 0 4px 4px;
+
+    &--month {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    &--day {
+      font-size: 30px;
+      line-height: 1;
+      font-family: $Ruda;
+    }
+  }
+
+  &__text {
+    padding: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    transition: color 0.3s;
   }
 }
 
