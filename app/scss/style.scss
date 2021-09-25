@@ -305,11 +305,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     letter-spacing: 0;
-    height: 600px;
-    padding: 143px 0 141px;
   }
 
   &__inner {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__content {
     background-color: $slider__bg;
     padding: 24px;
     border-radius: 6px;
