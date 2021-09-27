@@ -17,3 +17,15 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $lines-to-show;
 }
+
+@mixin media-width($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content; 
+  } 
+}
+
+@mixin media-height($width) {
+  @media only screen and (max-height: $width+ "px") and (orientation: landscape) {
+    @content; 
+  } 
+}

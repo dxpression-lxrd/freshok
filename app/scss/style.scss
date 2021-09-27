@@ -1,6 +1,6 @@
 @import 'fonts';
 @import 'vars';
-@import 'line-clamp';
+@import 'mixins';
 @import 'reset';
 @import 'global';
 
@@ -13,16 +13,94 @@
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include media-width($tablet) {
+      padding: 10px 0;
+    }
+
+    @include media-width($phone) {
+      padding: 3px 0;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+  }
+
+  &__burger {
+    display: none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: background-color 1s;
+
+    span {
+      background-color: $white;
+      position: absolute;
+      z-index: 15;
+      width: 30px;
+      height: 2px;
+      background-color: #ffffff;
+      top: calc(50% - 1px);
+      left: calc(50% - 15px);
+      transition: transform 1s, background-color 0.5s;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 0;
+        background-color: $white;
+        transition: transform 1s;
+      }
+
+      &::before {
+        transform: translateY(-10px);
+      }
+
+      &::after {
+        transform: translateY(10px);
+      }
+    }
+
+    &--active {
+      span {
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &--active {
+      background-color: rgba($white, 0.1);
+    }
+
+    @include media-width($tablet) {
+      display: block;
+    }
+
   }
 
   &__info {
     display: flex;
+
+    &--right {
+      @include media-width($tablet) {
+        display: none;
+      }
+    }
   }
 
   &__item {
@@ -35,6 +113,10 @@
 
       &:not(:last-child) {
         margin-right: 48px;
+
+        @include media-width($tablet) {
+          margin-right: 15px;
+        }
       }
 
       .header__link {
@@ -50,6 +132,11 @@
           top: 0;
           bottom: 0;
           margin: auto 0;
+
+          @include media-width($tablet) {
+            right: 0;
+            margin: auto;
+          }
         }
 
         &--address {
@@ -58,6 +145,10 @@
           &::before {
             background-image: url('../images/header/icon-del-address.svg');
             width: 32px;
+          }
+
+          @include media-width($tablet) {
+            padding-left: 0;
           }
         }
 
@@ -68,8 +159,20 @@
             background-image: url('../images/header/icon-tel.svg');
             width: 22px;
           }
+
+          @include media-width($tablet) {
+            padding-left: 0;
+          }
         }
       }
+
+      @include media-width($tablet) {
+        font-size: 0;
+        width: 44px;
+        height: 44px;
+        right: -10px;
+      }
+
     }
   }
 
@@ -81,10 +184,32 @@
     }
   }
 
+
   &__bottom {
     padding: 25px 0;
     background-color: $green-900;
     font-size: 14px;
+
+    @include media-width($tablet) {
+      position: relative;
+      padding: 11px 0;
+    }
+
+    @include media-width($phone) {
+      padding: 9px 0;
+    }
+  }
+
+  .logo__img {
+    max-width: fit-content;
+  }
+
+
+
+  &__logo {
+    @include media-width($laptop) {
+      margin-right: 10px;
+    }
   }
 
   &__catalog {
@@ -92,6 +217,17 @@
     max-width: 240px;
     width: 100%;
     left: -10px;
+
+    @include media-width($laptop) {
+      left: 0;
+      margin-right: 15px;
+      max-width: 190px;
+    }
+
+
+    @include media-width($tablet) {
+      display: none;
+    }
   }
 
   &__catalog-btn {
@@ -123,6 +259,10 @@
       width: 25px;
       height: 17px;
       left: 18px;
+
+      @include media-width($laptop) {
+        display: none;
+      }
     }
 
     &::after {
@@ -133,6 +273,12 @@
       height: 4px;
       right: 18px;
       transition: transform 0.7s;
+
+      @include media-width($laptop) {
+        right: 11px;
+        width: 12px;
+        height: 6px;
+      }
     }
 
     &:hover,
@@ -148,6 +294,11 @@
         transform: rotate(180deg);
       }
     }
+
+    @include media-width($laptop) {
+      padding: 15px 16px 15px 0;
+    }
+
   }
 
   &__catalog-list {
@@ -202,6 +353,31 @@
     height: 50px;
     position: relative;
     left: -13px;
+    transition: bottom 0.5s;
+
+    @include media-width($laptop) {
+      left: 0;
+    }
+
+    @include media-width($phone) {
+      position: absolute;
+      max-width: 100%;
+      bottom: -48px;
+      height: 48px;
+      border: 1px solid $dark-800;
+      z-index: 1;
+      transition: transform 1s, opacity 0.7s, visibility 0s linear 0.7s;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20);
+    }
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+      transform: translateY(0);
+    }
   }
 
   &__input {
@@ -216,6 +392,10 @@
     background-image: url('../images/header/icon-search.svg');
     background-position: 13px center;
     background-repeat: no-repeat;
+
+    @include media-width($phone) {
+      border-radius: 0;
+    }
   }
 
   &__search-btn {
@@ -244,7 +424,16 @@
       box-shadow: inset 0 4px 4px $btn-active;
       background-color: $dark-800;
     }
+
+    @include media-width($phone) {
+      border-radius: 0;
+    }
   }
+
+  @include media-width($tablet) {
+    position: relative;
+  }
+
 }
 
 .user-nav {
@@ -260,10 +449,39 @@
 
     &:not(:last-child) {
       margin-right: 11px;
+
+      @include media-width($phone) {
+        margin-right: 6px;
+      }
     }
 
     &:hover {
       background-color: $white-hover;
+    }
+
+    &--search {
+      display: none;
+
+      @include media-width($phone) {
+        display: block;
+      }
+    }
+
+    &--login,
+    &--like {
+      @include media-width($tablet) {
+        display: none;
+      }
+    }
+
+    &--buy {
+
+      svg {
+        @include media-width($phone) {
+          width: 24px;
+          height: 23px;
+        }
+      }
     }
   }
 
@@ -274,6 +492,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include media-width($phone) {
+      width: 44px;
+      height: 44px;
+    }
   }
 
 
@@ -292,6 +515,247 @@
     border-radius: 9px;
     top: 3px;
     left: 3px;
+  }
+
+  @include media-width($phone) {
+    position: relative;
+    right: 3px;
+  }
+}
+
+.sidebar {
+  color: $dark-800;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  max-width: 300px;
+  background-color: $white;
+  transform: translateX(-100%);
+  transition: transform 1s;
+  z-index: 50;
+  overflow: scroll;
+
+  &__top {
+    padding: 26px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 30px;
+  }
+
+  &__close {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 15;
+
+    span {
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $black;
+        margin: auto;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+
+    &--active {
+      background-color: rgba($silver-600, 0.3);
+      border-radius: 3px;
+    }
+  }
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__login {
+    background-color: $green-900;
+    padding: 15px 0;
+  }
+
+  &__authentication {
+    position: relative;
+    padding-left: 25px;
+  }
+
+  &__icon {
+    &--user {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    line-height: 1;
+    color: $white;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+
+    &--login {
+      padding: 0 15px;
+      border-right: 1px solid;
+    }
+
+    &--register {
+      padding: 0 10px;
+    }
+  }
+
+  &__catalog-btn {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    position: relative;
+    padding: 14px 0 14px 56px;
+    width: 100%;
+    text-align: left;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/catalog_icon.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: 15px;
+      width: 25px;
+      height: 19px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+  }
+
+  &__contact {
+    padding: 9px 0 24px 0;
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+  }
+
+  &__contact-list {
+    margin-bottom: 3px;
+  }
+
+  &__contact-item {
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+
+    &--tel {
+      &::before {
+        background-image: url('../images/icons/icon-tel.svg');
+        height: 24px;
+      }
+    }
+
+    &--nav {
+      &::before {
+        background-image: url('../images/icons/icon-nav.svg');
+        height: 33px;
+      }
+    }
+  }
+
+  &__contact-link {
+    padding: 15px 15px 15px 54px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .social {
+    display: flex;
+    padding: 0 15px;
+
+    &__icon {
+      height: 32px;
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    &__link {
+      font-size: 0;
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    path {
+      fill: $black;
+    }
+  }
+
+  &__list {
+    padding: 24px 0;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 12px;
+    display: inline-block;
+    width: 100%;
+  }
+
+
+}
+
+.content-overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background: rgba($black, 0.1);
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+
+  &--show {
+    transform: translateX(0);
+    z-index: 1;
   }
 }
 
@@ -325,9 +789,7 @@
   &__title {
     font-family: $Ruda;
     text-transform: uppercase;
-    font-size: 60px;
     font-weight: 900;
-    line-height: 1.3;
     color: $dark-500;
     max-width: 777px;
     @include line-clamp (60, 1.3, 3);

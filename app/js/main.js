@@ -10,7 +10,40 @@ $(function () {
     $('.header__catalog-list').toggleClass('header__catalog-list--active');
   });
 
-​
+  $('.user-nav__item--search').on('click', function () {
+    $('.header__form').toggleClass('header__form--active')
+  });
+
+  $('.header__burger').on('click', function () {
+    $(this).toggleClass('header__burger--active');
+    $('.sidebar').toggleClass('sidebar--active');
+    $('.sidebar__close').removeClass('sidebar__close--active');
+    $('.content-overflow').toggleClass('content-overflow--show');
+    $('body').toggleClass('overflow');
+  });
+
+  $('.sidebar__close').on('click', function () {
+    $(this).toggleClass('sidebar__close--active');
+    $('.sidebar').removeClass('sidebar--active');
+    $('.header__burger').removeClass('header__burger--active');
+    $('.content-overflow').removeClass('content-overflow--show');
+    $('body').removeClass('overflow');
+  });
+
+  $(document).mouseup(function (e){
+		var sidebar = $('.sidebar--active'); 
+		if (!sidebar.is(e.target)
+		    && sidebar.has(e.target).length === 0) {
+      sidebar.removeClass('sidebar--active');
+      $('.content-overflow').removeClass('content-overflow--show');
+      $('.header__burger').removeClass('header__burger--active');
+      $('.sidebar').removeAttr ("");
+      $('body').removeClass('overflow');
+		} 
+	});
+
+
+  ​
 
   var mixitup1 = document.querySelector('[data-ref="mixitup-1"]');
   var mixitup2 = document.querySelector('[data-ref="mixitup-2"]');
