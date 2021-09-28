@@ -76,7 +76,7 @@
             <picture class="logo__box">
               <source class="logo__img" media="(max-width: 992px)" srcset="images/header/logo-short.svg"
                 alt="Логотип сайта" width="37" height="40">
-              <img class="logo__img" src="images/header/logo.svg" alt="Логотип сайта" width="200" height="60">
+              <img class="logo__img--mobile" src="images/header/logo.svg" alt="Логотип сайта" width="200" height="60">
             </picture>
           </a>
 
@@ -422,7 +422,7 @@
         Наши спец.предложения
       </h2>
       <ul class="intro-slider__list">
-        <li class="intro-slider__item" style="background-image: url('images/slider/bg-1.jpg')">
+        <li class="intro-slider__item" style="background-image: url('images/slider/bg-1.jpg');">
           <div class="container">
             <div class="intro-slider__inner">
               <div class="intro-slider__content">
@@ -490,7 +490,7 @@
         </li>
       </ul>
     </section>
-  <!-- 
+
     <section class="advantages section">
       <div class="container">
 
@@ -609,6 +609,13 @@
                   Ананас, 1кг
                 </h3>
 
+                <form class="quanity">
+                    <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
+                    <button class="quanity__btn quanity__btn--minus" type="button" aria-label="Удалить единицу товара"></button>
+                    <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1" readonly="">
+                    <button class="quanity__btn quanity__btn--plus" type="button" aria-label="Добавить единицу товара"></button>
+                </form>
+
                 <p class="product-card__offers">
                   <span class="product-card__price product-card__price--old">
                     1999 ₽
@@ -647,6 +654,13 @@
                 <h3 class="product-card__name">
                   Лимон, 1кг
                 </h3>
+
+                <form class="quanity">
+                  <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
+                  <button class="quanity__btn quanity__btn--minus" type="button" aria-label="Удалить единицу товара"></button>
+                  <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1" readonly="">
+                  <button class="quanity__btn quanity__btn--plus" type="button" aria-label="Добавить единицу товара"></button>
+              </form>
 
                 <p class="product-card__offers">
                   <span class="product-card__price">
@@ -687,6 +701,13 @@
                   Питахайя красная с белой мякотью, 1шт
                 </h3>
 
+                <form class="quanity">
+                  <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
+                  <button class="quanity__btn quanity__btn--minus" type="button" aria-label="Удалить единицу товара"></button>
+                  <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1" readonly="">
+                  <button class="quanity__btn quanity__btn--plus" type="button" aria-label="Добавить единицу товара"></button>
+              </form>
+
                 <p class="product-card__offers">
                   <span class="product-card__price">
                     1019 ₽
@@ -725,6 +746,13 @@
                 <h3 class="product-card__name">
                   Перец оранжевый, 1кг
                 </h3>
+
+                <form class="quanity">
+                  <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
+                  <button class="quanity__btn quanity__btn--minus" type="button" aria-label="Удалить единицу товара"></button>
+                  <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1" readonly="">
+                  <button class="quanity__btn quanity__btn--plus" type="button" aria-label="Добавить единицу товара"></button>
+              </form>
 
                 <p class="product-card__offers">
                   <span class="product-card__price">
@@ -765,6 +793,13 @@
                   Морковь молодая с бабушкиной грядки, 1кг
                 </h3>
 
+                <form class="quanity">
+                  <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
+                  <button class="quanity__btn quanity__btn--minus" type="button" aria-label="Удалить единицу товара"></button>
+                  <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1" readonly="">
+                  <button class="quanity__btn quanity__btn--plus" type="button" aria-label="Добавить единицу товара"></button>
+              </form>
+
                 <p class="product-card__offers">
                   <span class="product-card__price">
                     49 ₽
@@ -802,6 +837,13 @@
                 <h3 class="product-card__name">
                   Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный
                 </h3>
+
+                <form class="quanity">
+                  <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
+                  <button class="quanity__btn quanity__btn--minus" type="button" aria-label="Удалить единицу товара"></button>
+                  <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1" readonly="">
+                  <button class="quanity__btn quanity__btn--plus" type="button" aria-label="Добавить единицу товара"></button>
+              </form>
 
                 <p class="product-card__offers">
                   <span class="product-card__price product-card__price--old">
@@ -844,6 +886,13 @@
                   Кофе с коноплей органический Caffé Salomoni 250г
                 </h3>
 
+                <form class="quanity">
+                  <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
+                  <button class="quanity__btn quanity__btn--minus" type="button" aria-label="Удалить единицу товара"></button>
+                  <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1" readonly="">
+                  <button class="quanity__btn quanity__btn--plus" type="button" aria-label="Добавить единицу товара"></button>
+              </form>
+
                 <p class="product-card__offers">
                   <span class="product-card__price">
                     877 ₽
@@ -878,6 +927,13 @@
                 <h3 class="product-card__name">
                   Кетчуп томатный детский органический Bio-Zentrale 500мл
                 </h3>
+
+                <form class="quanity">
+                  <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
+                  <button class="quanity__btn quanity__btn--minus" type="button" aria-label="Удалить единицу товара"></button>
+                  <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1" readonly="">
+                  <button class="quanity__btn quanity__btn--plus" type="button" aria-label="Добавить единицу товара"></button>
+              </form>
 
                 <p class="product-card__offers">
                   <span class="product-card__price">
@@ -927,7 +983,8 @@
               Сезонная распродажа
             </p>
             <h3 class="banner__title">
-              Овощепад До -50%
+              Овощепад 
+              <span>До -50%</span> 
             </h3>
             <a class="banner__link" href="#">
               Перейти к покупкам
@@ -942,7 +999,8 @@
               Ням-ням
             </p>
             <h3 class="banner__title">
-              Свежий Хлебчик
+              Свежий 
+              <span>Хлебчик</span> 
             </h3>
             <a class="banner__link" href="#">
               Перейти к покупкам
@@ -954,7 +1012,7 @@
 
       </div>
     </section>
-
+ 
     <section class="stock section" data-ref="mixitup-2">
       <div class="container">
 
@@ -1304,7 +1362,7 @@
         </a>
       </div>
     </section>
-
+<!-- 
     <section class="brands section">
       <div class="container">
 

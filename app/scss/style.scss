@@ -359,6 +359,10 @@
       left: 0;
     }
 
+    @include media-width($tablet) {
+      margin: 0 20px;
+    }
+
     @include media-width($phone) {
       position: absolute;
       max-width: 100%;
@@ -369,7 +373,8 @@
       transition: transform 1s, opacity 0.7s, visibility 0s linear 0.7s;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-20);
+      transform: translateY(-20%);
+      margin: 0;
     }
 
     &--active {
@@ -534,8 +539,9 @@
   background-color: $white;
   transform: translateX(-100%);
   transition: transform 1s;
-  z-index: 50;
+  z-index: 999;
   overflow: scroll;
+  box-shadow: 15px 0px 8px -9px rgba(0, 0, 0, 0.2);
 
   &__top {
     padding: 26px 0;
@@ -707,6 +713,7 @@
 
     &__icon {
       height: 32px;
+
       &:not(:last-child) {
         margin-right: 12px;
       }
@@ -755,7 +762,7 @@
 
   &--show {
     transform: translateX(0);
-    z-index: 1;
+    z-index: 50;
   }
 }
 
@@ -776,12 +783,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include media-width($tablet) {
+      height: 400px;
+    }
+
+    @include media-width($phone) {
+      margin: 0 -15px;
+      height: 320px;
+    }
   }
 
   &__content {
     background-color: $slider__bg;
     padding: 24px;
     border-radius: 6px;
+
+    @include media-width($phone) {
+      padding: 15px;
+      border-radius: 0;
+    }
   }
 
   // .slider__title
@@ -794,6 +815,16 @@
     max-width: 777px;
     @include line-clamp (60, 1.3, 3);
     margin-bottom: 7px;
+
+    @include media-width($tablet) {
+      font-size: 39px;
+    }
+
+    @include media-width($phone) {
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
   }
 
   // .slider__subtitle
@@ -810,6 +841,10 @@
     margin-bottom: 34px;
     font-weight: 400;
     @include line-clamp (16, 1.4, 2);
+
+    @include media-width($phone) {
+      margin-bottom: 24px;
+    }
   }
 
   // .slider__link
@@ -819,6 +854,10 @@
     transition: background-color 0.5s, box-shadow 0.5s;
     outline: transparent;
     display: inline-block;
+
+    @include media-width($phone) {
+      font-size: 14px;
+    }
   }
 
   &__arrow-left,
@@ -863,6 +902,38 @@
   &__arrow-right {
     right: 52px;
   }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    font-size: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    margin: 0 auto;
+
+
+    li {
+      margin: 0 15px;
+      width: 20px;
+      height: 20px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 2px solid $silver-600;
+
+      @include media-width($phone) {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+      }
+    }
+
+    .slick-active {
+      background-color: $green-900;
+      border: 2px solid transparent;
+    }
+  }
 }
 
 .advantages {
@@ -875,6 +946,10 @@
     display: flex;
     justify-content: center;
     letter-spacing: 0;
+
+    @include media-width($phone) {
+      display: block;
+    }
   }
 
   // .advantages__item
@@ -887,6 +962,16 @@
 
     &:not(:last-child) {
       margin-right: 65px;
+
+      @include media-width($tablet) {
+        margin-right: 10px;
+      }
+
+      @include media-width($phone) {
+        margin-right: 0;
+        margin-bottom: 30px;
+        max-width: 100%;
+      }
     }
 
     &::before {
@@ -899,6 +984,16 @@
       background-size: cover;
       left: 0;
       top: 0;
+
+      @include media-width($tablet) {
+        width: 40px;
+        height: 40px;
+      }
+
+      @include media-width($phone) {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &--delivery::before {
@@ -915,6 +1010,14 @@
 
     &--support::before {
       background-image: url('../images/advantages/24-hours.svg')
+    }
+
+    @include media-width($tablet) {
+      padding-left: 50px;
+    }
+
+    @include media-width($tablet) {
+      padding-left: 74px;
     }
   }
 
@@ -934,6 +1037,10 @@
     font-weight: 400;
     @include line-clamp (14, 1.4, 2);
   }
+
+  @include media-width($phone) {
+    padding: 30px 0;
+  }
 }
 
 .product-filter {
@@ -946,6 +1053,14 @@
 
     &:not(:last-child) {
       margin-right: 27px;
+
+      @include media-width($phone) {
+        margin-right: 25px;
+      }
+    }
+
+    @include media-width($phone) {
+      margin-top: 11px;
     }
   }
 
@@ -953,10 +1068,25 @@
     text-transform: uppercase;
     color: $dark-500;
     font-size: 15px;
+    border-bottom: 3px solid transparent;
 
     &:hover {
       border-bottom: 3px solid $green-200;
     }
+
+    @include media-width($phone) {
+      font-size: 14px;
+    }
+  }
+
+  @include media-width($tablet) {
+    margin-bottom: 40px;
+  }
+
+  @include media-width($phone) {
+    flex-wrap: wrap;
+    margin-top: -11px;
+    margin-bottom: 24px;
   }
 }
 
@@ -967,6 +1097,21 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 47px;
+
+    @include media-width($laptop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-width($tablet) {
+      grid-gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    @include media-width($phone) {
+      grid-template-columns: repeat(2, minmax(130px, 1fr));
+      grid-gap: 5px;
+      margin-bottom: 24px;
+    }
   }
 
   &__button {
@@ -1004,6 +1149,10 @@
   &:hover {
     border: 1px solid $green-900;
     transform: scale(1.05);
+
+    @include media-width($tablet) {
+      transform: scale(1);
+    }
   }
 
   &__badges {
@@ -1063,6 +1212,7 @@
 
   &__image {
     object-fit: cover;
+    height: auto
   }
 
   // .product-card__name
@@ -1071,6 +1221,12 @@
     @include line-clamp (14, 1.4, 3);
     margin-bottom: 17px;
     min-height: 60px;
+
+    @include media-width($phone) {
+      margin-bottom: 60px;
+      @include line-clamp (14, 1.4, 2);
+      min-height: auto;
+    }
   }
 
   // .product-card__bottom
@@ -1078,7 +1234,13 @@
   &__bottom {
     padding: 6px 18px 22px;
     position: relative;
+
+    @include media-width($phone) {
+      padding: 15px 12px 12px;
+    }
   }
+
+
 
   // .product-card__offers
 
@@ -1141,7 +1303,82 @@
       margin: auto
     }
   }
+
+  @include media-width($laptop) {
+    max-width: 100%;
+  }
 }
+
+.quanity {
+
+  width: 84px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 15;
+
+  &__btn {
+    background-color: $green-900;
+    width: 24px;
+    height: 100%;
+    position: relative;
+    transition: box-shadow 0.5s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $white;
+      width: 16px;
+      height: 2px;
+      border-radius: 1px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+    }
+
+    &--minus {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    &--plus {
+      right: 0;
+      border-radius: 0 3px 3px 0;
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:hover {
+      box-shadow: inset 0 0 0 24px rgba($black, 0.15);
+    }
+  }
+
+  &__counter {
+    width: 36px;
+    background-color: rgba($green-900, 0.1);
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  @include media-width($phone) {
+    left: 8px;
+    margin: 0;
+    bottom: 55px;
+  }
+}
+
+.sr-only {}
+
 
 .banner {
 
@@ -1150,6 +1387,17 @@
     grid-template-columns: 630px repeat(2, 1fr);
     grid-column-gap: 30px;
     text-transform: uppercase;
+
+    @include media-width($laptop) {
+      grid-template-columns: 420px repeat(2, 1fr);
+      grid-column-gap: 20px;
+    }
+
+    @include media-width($tablet) {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 15px;
+    }
   }
 
   &__item {
@@ -1167,6 +1415,10 @@
     color: $dark-500;
     letter-spacing: 0;
 
+    @include media-width($tablet) {
+      background-position: center;
+    }
+
     &--modified {
       max-width: 630px;
       background-color: $fruits-bg;
@@ -1181,10 +1433,26 @@
       .banner__title {
         text-shadow: 2px 2px 0 $btn-active;
         max-width: 351px;
+
+        @include media-width($phone) {
+          max-width: 260px;
+        }
       }
+
+      @include media-width($phone) {
+        background-position: -150px center;
+      }
+      
     }
 
+    @include media-width($tablet) {
+      padding-left: 10px;
+      max-width: 100%;
+    }
 
+    @include media-width($phone) {
+      padding-left: 15px;
+    }
   }
 
   &__overtitle {
@@ -1192,6 +1460,10 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     margin-bottom: 18px;
+
+    @include media-width($tablet) {
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -1199,6 +1471,20 @@
     font-size: 30px;
     margin-bottom: 12px;
     max-width: 200px;
+
+    @include media-width($tablet) {
+      max-width: 100%;
+    }
+
+    @include media-width($phone) {
+      max-width: 260px;
+      font-size: 24px;
+      margin-bottom: 77px;
+
+      span {
+        display: block;
+      }
+    }
   }
 
   &__link {
@@ -1230,6 +1516,22 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 46px;
+
+    @include media-width($laptop) {
+      grid-gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-width($tablet) {
+      grid-gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-width($phone) {
+      grid-gap: 15px;
+      grid-template-columns: 1fr;
+      padding: 0 23px;
+    }
   }
 
   // .stock__item
@@ -1256,6 +1558,11 @@
           &__name {
             margin-bottom: 7px;
             width: 100%;
+
+            @include media-width($phone) {
+              -webkit-line-clamp: 3;
+              min-height: 60px;
+            }
           }
 
           &__status {
@@ -1291,6 +1598,12 @@
             }
           }
 
+          &__offers {
+            @include media-width($laptop) {
+              bottom: -3px;
+            }
+          }
+
           &__rating {
             position: absolute;
             right: 0;
@@ -1313,6 +1626,10 @@
           }
         }
       }
+
+      @include media-width($laptop) {
+        height: auto;
+      }
     }
 
   }
@@ -1321,6 +1638,10 @@
     display: block;
     margin: 0 auto;
     width: fit-content;
+  }
+
+  @include media-width($tablet) {
+    padding-top: 48px;
   }
 }
 
