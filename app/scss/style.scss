@@ -369,7 +369,7 @@
       bottom: -48px;
       height: 48px;
       border: 1px solid $dark-800;
-      z-index: 1;
+      z-index: 20;
       transition: transform 1s, opacity 0.7s, visibility 0s linear 0.7s;
       opacity: 0;
       visibility: hidden;
@@ -1531,6 +1531,7 @@
       grid-gap: 15px;
       grid-template-columns: 1fr;
       padding: 0 23px;
+      margin-bottom: 24px;
     }
   }
 
@@ -1641,7 +1642,7 @@
   }
 
   @include media-width($tablet) {
-    padding-top: 48px;
+    padding: 48px 0;
   }
 }
 
@@ -1651,6 +1652,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @include media-width($phone) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+      justify-items: center;
+    }
   }
 
   &__item {
@@ -1681,6 +1689,14 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+
+    @include media-width($phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
   }
 
   &__all-news {
@@ -1699,12 +1715,27 @@
     &:active {
       color: $buy-hover;
     }
+
+    @include media-width($phone) {
+      bottom: 0;
+      margin-bottom: 24px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
+
+    @include media-width($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+
+    @include media-width($phone) {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
   }
 
 }
@@ -1722,12 +1753,21 @@
     .news-card__title {
       color: $green-900;
     }
+
+    @include media-width($phone) {
+      transform: scale(1);
+    }
   }
 
   &__img {
     object-fit: cover;
     border-radius: 6px 6px 0 0;
     background-image: url('../images/news/item-bg.jpg');
+    width: 100%;
+
+    @include media-width($phone) {
+      height: 200px;
+    }
   }
 
   &__date {
@@ -1759,6 +1799,10 @@
 
   &__wrapper {
     padding: 18px;
+
+    @include media-width($phone) {
+      padding: 15px;
+    }
   }
 
   &__title {
@@ -1766,6 +1810,10 @@
     letter-spacing: 0;
     transition: color 0.3s;
     font-weight: 600;
+
+    @include media-width($phone) {
+      font-size: 14px;
+    }
   }
 
 }
@@ -1778,11 +1826,33 @@
   &__logo {
     margin-bottom: 24px;
     display: inline-block;
+
+    @include media-width($phone) {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 24px;
+    }
   }
 
   &__top {
     padding-bottom: 30px;
     border-bottom: 1px solid $white-hover;
+
+    .footer__inner {
+
+      @include media-width($tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+        grid-gap: 0;
+      }
+
+      @include media-width($phone) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin: 0 -15px;
+      }
+    }
   }
 
   // .footer__inner
@@ -1790,6 +1860,14 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include media-width($laptop) {
+      align-items: center;
+    }
+
+    @include media-width($phone) {
+      flex-wrap: wrap;
+    }
   }
 
   // .footer__form
@@ -1798,6 +1876,23 @@
     display: inline-block;
     position: relative;
     margin-right: 157px;
+    max-width: 300px;
+
+    @include media-width($laptop) {
+      margin-right: 30px;
+    }
+
+    @include media-width($tablet) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include media-width($phone) {
+      order: 3;
+      margin-right: 0;
+      max-width: 300px;
+      padding-top: 24px;
+    }
   }
 
   &__label {
@@ -1810,7 +1905,6 @@
   // .footer__input
 
   &__input {
-    max-width: 298px;
     width: 100%;
     padding: 12px 120px 12px 12px;
     border-radius: 6px;
@@ -1824,6 +1918,7 @@
   &__btn {
     padding: 13px 10px 12px 14px;
     font-size: 12px;
+    height: 40px;
     text-transform: uppercase;
     font-weight: 700;
     position: absolute;
@@ -1836,9 +1931,34 @@
     column-count: 3;
     column-gap: 70px;
     margin-right: 65px;
+
+    @include media-width($laptop) {
+      margin-right: 30px;
+      column-gap: 45px;
+    }
+
+    @include media-width($tablet) {
+      order: 3;
+      grid-column: span 2/3;
+      margin-right: 0;
+      border-top: 1px solid $white-hover;
+      margin: 0 -15px;
+      padding: 24px 15px 0;
+    }
+
+    @include media-width($phone) {
+      order: 2;
+      grid-column: auto;
+      column-count: 2;
+      column-gap: 47px;
+      padding: 24px 50px;
+      margin: 0;
+    }
   }
 
   // .footer__item
+
+
 
   &__item {
     font-weight: 400;
@@ -1870,6 +1990,22 @@
           opacity: 0.7;
         }
       }
+
+      @include media-width($tablet) {
+        justify-content: center;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    @include media-width($tablet) {
+      order: 1;
+      width: 100%;
+      align-items: center;
+    }
+
+    @include media-width($tablet) {
+      padding-bottom: 24px;
     }
   }
 
@@ -1883,6 +2019,14 @@
     padding: 24px 0;
   }
 
+  &__copyrith {
+    @include media-width($phone) {
+      text-align: center;
+      width: 100%;
+      order: 2;
+    }
+  }
+
   &__payment {
     display: flex;
 
@@ -1890,6 +2034,12 @@
       &:not(:last-child) {
         margin-right: 24px;
       }
+    }
+
+    @include media-width($phone) {
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 24px;
     }
   }
 }
