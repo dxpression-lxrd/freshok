@@ -19,7 +19,7 @@ $(function () {
       },
     ]
   });
-
+  
   $('.header__catalog-btn').on('click', function () {
     $(this).toggleClass('header__catalog-btn--active');
     $('.header__catalog-list').toggleClass('header__catalog-list--active');
@@ -85,7 +85,31 @@ $(function () {
     $(this).addClass('pagination__link--active');
   });
 
+  $('.mobile-filter').on('click', function() {
+    $(this).toggleClass('mobile-filter--active');
+    $('body').toggleClass('scroll-lock');
+    $('.filter-mobile').toggleClass('filter-mobile--active');
+    $('.content-blure').toggleClass('content-blure--show');
+  });
 
+  $('.filter-mobile__close').on('click', function() {
+    $('.filter-mobile').removeClass('filter-mobile--active')
+    $('.content-blure').removeClass('content-blure--show');
+    $('body').removeClass('scroll-lock');
+    $('.mobile-filter').removeClass('mobile-filter--active');
+  });
+
+ $(window).resize(function() {
+    /*If browser resized, check width again */
+    if ($(window).height() > 576) {
+     $('.catalog-content__list').removeClass('catalog-content__list--modifiled');
+    }
+    else {
+      $('catalog-content__list').addClass('catalog-content__list--modifiled');
+      $('.catalog-content__view-btn--list').removeClass('catalog-content__view-btn--active');
+      $('.catalog-content__view-btn--grid').addClass('catalog-content__view-btn--active');
+    }
+ });
 
   $('.select-style').on('click', function () {
     $(this)
@@ -102,6 +126,17 @@ $(function () {
   });
 
   $(document).mouseup(function (e){
+		var sidebar = $('.sidebar--active'); 
+		if (!sidebar.is(e.target)
+		    && sidebar.has(e.target).length === 0) {
+      sidebar.removeClass('sidebar--active');
+      $('.content-overflow').removeClass('content-overflow--show');
+      $('.header__burger').removeClass('header__burger--active');
+      $('body').removeClass('overflow');
+		} 
+	});
+
+  $(document).mouseup(function (e){
 		var selectBtn = $('.jq-selectbox__select--active'); 
 		if (!selectBtn.is(e.target)
 		    && selectBtn.has(e.target).length === 0) {
@@ -110,16 +145,17 @@ $(function () {
 	});
 
   $(document).mouseup(function (e){
-		var sidebar = $('.sidebar--active'); 
-		if (!sidebar.is(e.target)
-		    && sidebar.has(e.target).length === 0) {
-      sidebar.removeClass('sidebar--active');
-      $('.content-overflow').removeClass('content-overflow--show');
-      $('.header__burger').removeClass('header__burger--active');
-      $('.sidebar').removeAttr ("");
-      $('body').removeClass('overflow');
+		var filter = $('.filter-mobile--active'); 
+		if (!filter.is(e.target)
+		    && filter.has(e.target).length === 0) {
+      filter.removeClass('filter-mobile--active');
+      $('body').removeClass('scroll-lock');
+      $('.content-blure').removeClass('content-blure--show');
+      $('.mobile-filter').removeClass('mobile-filter--active');
 		} 
 	});
+
+
 
 
   // prise-slider

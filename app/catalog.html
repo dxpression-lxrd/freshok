@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Фрешок | Главная страница </title>
+  <title> Фрешок | Каталог товаров </title>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link href="css/style.min.css" rel="stylesheet">
 
@@ -234,7 +234,7 @@
           <a class="logo sidebar__logo" href="#">
             <img class="logo__img" src="images/icons/logo-sidebar.svg" alt="Логотип сайта" width="200" height="60">
           </a>
-          <button class="sidebar__close" aria-label="Закрыть боковое меню">
+          <button class="sidebar__close close-btn" aria-label="Закрыть боковое меню">
             <span></span>
           </button>
         </div>
@@ -423,15 +423,15 @@
         <ul class="breadcrumbs__list">
 
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">
+            <a class="breadcrumbs__link" href="http://localhost:3000">
               Главная
             </a>
           </li>
 
           <li class="breadcrumbs__item">
-            <span class="breadcrumbs__link" href="#">
+            <a class="breadcrumbs__link" href="#">
               Каталог товаров
-            </span>
+            </a>
 
           </li>
         </ul>
@@ -446,7 +446,16 @@
         </h2>
 
         <div class="catalog__inner">
-          <aside class="catalog__filters filter">
+          <aside class="catalog__filters filter filter-mobile">
+
+            <div class="filter__top">
+              <a class="logo" href="#">
+                <img class="logo__img" src="images/icons/logo-sidebar.svg" alt="Логотип сайта" width="200" height="60">
+              </a>
+              <button class="filter-mobile__close close-btn" aria-label="Закрыть меню фильтров">
+                <span></span>
+              </button>
+            </div>
 
             <div class="filter__categories spacer">
               <button class="filter__btn filter__btn--categories">
@@ -684,10 +693,26 @@
               </div>
             </div>
           </aside>
+          <div class="content-blure"></div>
 
           <div class="catalog-content">
 
             <div class="catalog-content__filter">
+
+              <button class="mobile-filter">
+                <svg class="mobile-filter__icon" width="32" height="36" viewBox="0 0 32 36" fill="none">
+                  <g>
+                  <path d="M13.7804 28.1251H1.13878C0.510161 28.1251 9.68073e-07 28.6291 9.95549e-07 29.2501C1.02303e-06 29.8711 0.510218 30.3751 1.13878 30.3751H13.7803C14.3076 32.9423 16.6046 34.8751 19.3593 34.8751C22.114 34.8751 24.4108 32.9423 24.938 30.3751H30.7469C31.3755 30.3751 31.8857 29.8711 31.8857 29.2501C31.8857 28.6291 31.3755 28.1251 30.7469 28.1251H24.9383C24.411 25.5578 22.114 23.6251 19.3593 23.6251C16.6047 23.6251 14.3076 25.5578 13.7804 28.1251ZM22.7755 29.2501C22.7755 31.1142 21.2463 32.6251 19.3593 32.6251C17.4723 32.6251 15.9429 31.1142 15.9429 29.2501C15.9429 27.3859 17.4723 25.8751 19.3593 25.8751C21.2463 25.8751 22.7755 27.3859 22.7755 29.2501ZM2.39261 16.875H1.13878C0.510161 16.875 4.70298e-07 17.3791 4.97775e-07 18C5.25251e-07 18.621 0.510161 19.125 1.13878 19.125H2.39255C2.9198 21.6923 5.21671 23.6251 7.97145 23.6251C10.7262 23.6251 13.023 21.6923 13.5503 19.125H30.7469C31.3755 19.125 31.8857 18.621 31.8857 18C31.8857 17.379 31.3755 16.875 30.7469 16.875H13.5503C13.0231 14.3078 10.7262 12.375 7.9715 12.375C5.21682 12.375 2.91984 14.3078 2.39261 16.875ZM11.3878 18C11.3878 19.8642 9.8584 21.375 7.97145 21.375C6.08448 21.375 4.5551 19.8642 4.5551 18C4.5551 16.1359 6.08448 14.625 7.97145 14.625C9.8584 14.625 11.3878 16.1359 11.3878 18ZM18.3355 5.62502H1.13878C0.510161 5.62502 -2.74764e-08 6.12906 0 6.75001C2.74741e-08 7.37097 0.510161 7.87501 1.13878 7.87501H18.3355C18.8627 10.4423 21.1597 12.375 23.9143 12.375C26.669 12.375 28.9659 10.4423 29.4931 7.87501H30.7469C31.3755 7.87501 31.8857 7.37097 31.8857 6.75001C31.8857 6.12906 31.3755 5.62502 30.7469 5.62502H29.4931C28.9659 3.05774 26.669 1.125 23.9143 1.125C21.1597 1.125 18.8628 3.05774 18.3355 5.62502ZM27.3306 6.75001C27.3306 8.61414 25.8012 10.125 23.9143 10.125C22.0274 10.125 20.498 8.61414 20.498 6.75001C20.498 4.88587 22.0274 3.37499 23.9143 3.37499C25.8012 3.37499 27.3306 4.88587 27.3306 6.75001Z" fill="#C1C1C1"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0">
+                  <rect width="31.8857" height="36" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+                  
+              </button>
+
               <select class="catalog-content__filter-sort select-style" name="filter-sort"
                 aria-label="Выбрать тип сортировки карточек продуктов">
                 <option>По названию</option>
@@ -789,9 +814,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a href="#" class="product-card__link">
                       <img class="product-card__image" src="images/product-card/pineapple.jpg" alt="Фото ананаса"
                         width="300" height="225">
+                      <div class="product-card__icon"></div>              
                     </a>
 
 
@@ -812,16 +838,6 @@
                       <h3 class="product-card__name">
                         Ананас, 1кг
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price product-card__price--old">
@@ -850,9 +866,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/lemon.jpg" alt="Фото лимона" width="300"
                         height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
 
@@ -873,16 +890,6 @@
                       <h3 class="product-card__name">
                         Лимон, 1кг
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -912,9 +919,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
                         width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
 
@@ -935,16 +943,6 @@
                       <h3 class="product-card__name">
                         Питахайя красная с белой мякотью, 1шт
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -974,9 +972,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
                         width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
                     <div class="product-card__bottom">
@@ -996,16 +995,6 @@
                       <h3 class="product-card__name">
                         Перец оранжевый, 1кг
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -1035,9 +1024,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/carrot.jpg" alt="Фото молодой моркови"
                         width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
                     <div class="product-card__bottom">
@@ -1057,16 +1047,6 @@
                       <h3 class="product-card__name">
                         Морковь молодая с бабушкиной грядки, 1кг
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -1095,9 +1075,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/juice.jpg"
                         alt="Фото сокосодержащего напитка Sanpellegrino Aranciata Orange" width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
                     <div class="product-card__bottom">
@@ -1117,16 +1098,6 @@
                       <h3 class="product-card__name">
                         Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price product-card__price--old">
@@ -1158,9 +1129,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/coffee.jpg"
                         alt="Фото кофе с коноплей органический Caffé Salomoni" width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
                     <div class="product-card__bottom">
@@ -1180,16 +1152,6 @@
                       <h3 class="product-card__name">
                         Кофе с коноплей органический Caffé Salomoni 250г
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -1215,9 +1177,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/ketchup.jpg"
                         alt="Фото кетчуп томатный детский органический Bio-Zentrale" width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
                     <div class="product-card__bottom">
@@ -1237,16 +1200,6 @@
                       <h3 class="product-card__name">
                         Кетчуп томатный детский органический Bio-Zentrale 500мл
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -1275,9 +1228,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
                         width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
 
@@ -1298,16 +1252,6 @@
                       <h3 class="product-card__name">
                         Питахайя красная с белой мякотью, 1шт
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -1337,9 +1281,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
                         width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
                     <div class="product-card__bottom">
@@ -1359,16 +1304,6 @@
                       <h3 class="product-card__name">
                         Перец оранжевый, 1кг
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -1397,9 +1332,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
                         width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
 
@@ -1420,16 +1356,6 @@
                       <h3 class="product-card__name">
                         Питахайя красная с белой мякотью, 1шт
                       </h3>
-
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
 
                       <p class="product-card__offers">
                         <span class="product-card__price">
@@ -1459,9 +1385,10 @@
                       </svg>
                     </button>
 
-                    <a href="#">
+                    <a class="product-card__link" href="#">
                       <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
                         width="300" height="225">
+                        <div class="product-card__icon"></div>    
                     </a>
 
                     <div class="product-card__bottom">
@@ -1482,16 +1409,6 @@
                         Перец оранжевый, 1кг
                       </h3>
 
-                      <div class="quanity">
-                        <label class="sr-only" for="quanity-input">Выбрать количество товара</label>
-                        <button class="quanity__btn quanity__btn--minus" type="button"
-                          aria-label="Удалить единицу товара"></button>
-                        <input class="quanity__counter" type="text" name="quantity" id="quanity-input" value="1"
-                          readonly="">
-                        <button class="quanity__btn quanity__btn--plus" type="button"
-                          aria-label="Добавить единицу товара"></button>
-                      </div>
-
                       <p class="product-card__offers">
                         <span class="product-card__price">
                           349 ₽
@@ -1505,7 +1422,7 @@
               </ul>
 
               <div class="catalog-content__bottom">
-                <a class="btn" href="#">
+                <a class="btn catalog-content__btn" href="#">
                   Показать еще
                 </a>
 

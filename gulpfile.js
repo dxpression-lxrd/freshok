@@ -34,6 +34,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+    'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
     'app/js/main.js'
   ])
   .pipe (concat('main.min.js'))
