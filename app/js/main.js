@@ -19,6 +19,28 @@ $(function () {
       },
     ]
   });
+
+  $('.brands__list').slick({
+    slidesToShow: 6,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 577,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
+  });
   
   $('.header__catalog-btn').on('click', function () {
     $(this).toggleClass('header__catalog-btn--active');
@@ -47,37 +69,21 @@ $(function () {
     $('body').removeClass('overflow');
   });
 
-  $('.filter__btn').on('click', function () {
-    $(this).toggleClass('filter__btn--active');
+  $('.filter__title').on('click', function () {
+    $(this).toggleClass('filter__title--active').next().slideToggle(700);
   });
 
-  $('.filter__btn--categories').on('click', function () {
-    $('.filter__list--categories').toggleClass('filter__list--active');
+  $('.view-catalog__btn').on('click', function () {
+    $('.view-catalog__btn').removeClass('view-catalog__btn--active');
+    $(this).addClass('view-catalog__btn--active');
   });
 
-  $('.filter__btn--brands').on('click', function () {
-    $('.filter__list--brands').toggleClass('filter__list--active');
+  $('.view-catalog__btn--list').on('click', function () {
+    $('.catalog__list').addClass('catalog__list--modifiled');
   });
 
-  $('.filter__btn--offers').on('click', function () {
-    $('.filter__list--offers').toggleClass('filter__list--active');
-  });
-
-  $('.filter__btn--price').on('click', function () {
-    $('.filter__price-wrapper').toggleClass('filter__price-wrapper--active');
-  });
-
-  $('.catalog-content__view-btn').on('click', function () {
-    $('.catalog-content__view-btn').removeClass('catalog-content__view-btn--active');
-    $(this).addClass('catalog-content__view-btn--active');
-  });
-
-  $('.catalog-content__view-btn--list').on('click', function () {
-    $('.catalog-content__list').addClass('catalog-content__list--modifiled');
-  });
-
-  $('.catalog-content__view-btn--grid').on('click', function () {
-    $('.catalog-content__list').removeClass('catalog-content__list--modifiled');
+  $('.view-catalog__btn--grid').on('click', function () {
+    $('.catalog__list').removeClass('catalog__list--modifiled');
   });
 
   $('.pagination__link').on('click', function () {
@@ -89,25 +95,24 @@ $(function () {
     $(this).toggleClass('mobile-filter--active');
     $('body').toggleClass('scroll-lock');
     $('.filter-mobile').toggleClass('filter-mobile--active');
-    $('.content-blure').toggleClass('content-blure--show');
+    $('.content-blur').toggleClass('content-blur--show');
   });
 
   $('.filter-mobile__close').on('click', function() {
     $('.filter-mobile').removeClass('filter-mobile--active')
-    $('.content-blure').removeClass('content-blure--show');
+    $('.content-blur').removeClass('content-blur--show');
     $('body').removeClass('scroll-lock');
     $('.mobile-filter').removeClass('mobile-filter--active');
   });
 
  $(window).resize(function() {
-    /*If browser resized, check width again */
     if ($(window).height() > 576) {
-     $('.catalog-content__list').removeClass('catalog-content__list--modifiled');
+     $('.catalog__list').removeClass('catalog__list--modifiled');
     }
     else {
-      $('catalog-content__list').addClass('catalog-content__list--modifiled');
-      $('.catalog-content__view-btn--list').removeClass('catalog-content__view-btn--active');
-      $('.catalog-content__view-btn--grid').addClass('catalog-content__view-btn--active');
+      $('catalog__list').addClass('catalogt__list--modifiled');
+      $('.view-catalog__btn--list').removeClass('view-catalog__btn--active');
+      $('.view-catalog__btn--grid').addClass('view-catalog__btn--active');
     }
  });
 
@@ -150,12 +155,12 @@ $(function () {
 		    && filter.has(e.target).length === 0) {
       filter.removeClass('filter-mobile--active');
       $('body').removeClass('scroll-lock');
-      $('.content-blure').removeClass('content-blure--show');
+      $('.content-blur').removeClass('content-blure--show');
       $('.mobile-filter').removeClass('mobile-filter--active');
 		} 
 	});
 
-
+// --------------------------------Подсказать как починить баг с верхними функциями, чтобы классы не убирались.-------------------------------------------------
 
 
   // prise-slider
@@ -220,7 +225,7 @@ $inputTo.on("input", function () {
 });
 
   ​
-//mixitUp
+//mixitUp -------------------Помочь с рваной анимацией в слайдере товаров--------------------------------
 
   var mixitup1 = document.querySelector('[data-ref="mixitup-1"]');
   var mixitup2 = document.querySelector('[data-ref="mixitup-2"]');

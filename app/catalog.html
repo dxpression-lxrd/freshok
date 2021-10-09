@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Фрешок | Каталог товаров </title>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
 
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link href="css/style.min.css" rel="stylesheet">
@@ -15,10 +16,6 @@
 </head>
 
 <body>
-
-  <h1 class="sr-only">
-    Фрешок. Интернет магазин продуктов
-  </h1>
 
   <header class="header">
 
@@ -415,305 +412,293 @@
     <div class="content-overflow"></div>
   </header>
 
+  <div class="breadcrumbs">
+    <div class="container">
+
+      <ul class="breadcrumbs__list">
+
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="http://localhost:3000">
+            Главная
+          </a>
+        </li>
+
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">
+            Каталог товаров
+          </a>
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="title title--left">
+      Каталог товаров
+    </h1>
+  </div>
+
   <main class="main">
 
-    <div class="breadcrumbs">
-      <div class="container">
+    <div class="container">
 
-        <ul class="breadcrumbs__list">
+      <div class="main__wrapper">
 
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="http://localhost:3000">
-              Главная
+        <div class="filters filter-mobile">
+
+          <div class="filter-mobile__top">
+            <a class="logo filter-mobile__logo" href="#">
+              <img class="logo__img" src="images/icons/logo-sidebar.svg" alt="Логотип сайта" width="200" height="60">
             </a>
-          </li>
+            <button class="filter-mobile__close close-btn" aria-label="Закрыть боковое меню">
+              <span></span>
+            </button>
+          </div>
 
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">
-              Каталог товаров
-            </a>
+          <section class="filter">
+            <h2 class="filter__title" tabindex="0" role="button">
+              Категории
+            </h2>
 
-          </li>
-        </ul>
+            <ul class="filter__list">
 
-      </div>
-    </div>
+              <li class="filter__item">
+                <a class="filter__link" href="#">
+                  Овощи и фрукты
+                </a>
+              </li>
 
-    <section class="catalog">
-      <div class="container">
-        <h2 class="title catalog__title">
-          Каталог товаров
-        </h2>
+              <li class="filter__item">
+                <a class="filter__link" href="#">
+                  Бакалея
+                </a>
+              </li>
 
-        <div class="catalog__inner">
-          <aside class="catalog__filters filter filter-mobile">
+              <li class="filter__item">
+                <a class="filter__link" href="#">
+                  Молочные продукты
+                </a>
+              </li>
 
-            <div class="filter__top">
-              <a class="logo" href="#">
-                <img class="logo__img" src="images/icons/logo-sidebar.svg" alt="Логотип сайта" width="200" height="60">
-              </a>
-              <button class="filter-mobile__close close-btn" aria-label="Закрыть меню фильтров">
-                <span></span>
-              </button>
-            </div>
+              <li class="filter__item">
+                <a class="filter__link" href="#">
+                  Хлеб
+                </a>
+              </li>
 
-            <div class="filter__categories spacer">
-              <button class="filter__btn filter__btn--categories">
-                Категории
-              </button>
+              <li class="filter__item">
+                <a class="filter__link" href="#">
+                  Мясо
+                </a>
+              </li>
 
-              <ul class="filter__list filter__list--categories">
+              <li class="filter__item">
+                <a class="filter__link" href="#">
+                  Колбаса
+                </a>
+              </li>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    Овощи и фрукты
-                  </a>
-                </li>
+              <li class="filter__item">
+                <a class="filter__link" href="#">
+                  Рыба
+                </a>
+              </li>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    Бакалея
-                  </a>
-                </li>
+              <li class="filter__item">
+                <a class="filter__link" href="#">
+                  Алкоголь
+                </a>
+              </li>
+            </ul>
+          </section>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    Молочные продукты
-                  </a>
-                </li>
+          <section class="filter">
+            <h2 class="filter__title" tabindex="0" role="button">
+              Предложения
+            </h2>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    Хлеб
-                  </a>
-                </li>
+            <ul class="filter__list">
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    Мясо
-                  </a>
-                </li>
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">Со скидкой</span>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    Колбаса
-                  </a>
-                </li>
+                </label>
+              </li>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    Рыба
-                  </a>
-                </li>
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">Новинка</span>
+                </label>
+              </li>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    Алкоголь
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">Хит</span>
+                </label>
+              </li>
 
-            <div class="filter__offers spacer">
-              <button class="filter__btn filter__btn--offers">
-                Предложения
-              </button>
+            </ul>
+          </section>
 
-              <ul class="filter__list filter__list--offers">
+          <section class="filter">
+            <h2 class="filter__title" tabindex="0" role="button">
+              Бренд
+            </h2>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">Со скидкой</span>
-                    </label>
-                  </a>
-                </li>
+            <ul class="filter__list">
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">Новинка</span>
-                    </label>
-                  </a>
-                </li>
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">CocaCola</span>
+                </label>
+              </li>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">Хит</span>
-                    </label>
-                  </a>
-                </li>
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">Pepsi</span>
+                </label>
+              </li>
 
-              </ul>
-            </div>
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">Sprite</span>
+                </label>
+              </li>
 
-            <div class="filter__brands spacer">
-              <button class="filter__btn filter__btn--brands">
-                Бренд
-              </button>
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">Fanta</span>
+                </label>
+              </li>
 
-              <ul class="filter__list filter__list--brands">
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">RedBull</span>
+                </label>
+              </li>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">CocaCola</span>
-                    </label>
-                  </a>
-                </li>
+              <li class="filter__item">
+                <label class="filter__label" tabindex="0">
+                  <input class="filter__checkbox" type="checkbox" name="checkbox">
+                  <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
+                    <path
+                      d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
+                      fill="#F6F6F6" />
+                  </svg>
+                  <span class="filter__checkbox-text">Dr Pepper</span>
+                </label>
+              </li>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">Pepsi</span>
-                    </label>
-                  </a>
-                </li>
+            </ul>
+          </section>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">Sprite</span>
-                    </label>
-                  </a>
-                </li>
+          <section class="filter">
+            <h2 class="filter__title" tabindex="0" role="button">
+              Цена
+            </h2>
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">Fanta</span>
-                    </label>
-                  </a>
-                </li>
+            <div class="filter__wrapper">
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">RedBull</span>
-                    </label>
-                  </a>
-                </li>
+              <div class="filter__display">
 
-                <li class="filter__item">
-                  <a class="filter__link" href="#">
-                    <label class="filter__label">
-                      <input class="filter__checkbox" type="checkbox" name="checkbox">
-                      <svg class="filter__checkbox-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="0.5" y="0.5" width="23" height="23" rx="2.5" fill="#F6F6F6" stroke="#C1C1C1" />
-                        <path
-                          d="M10.1963 16.3926C10.0456 16.3926 9.89481 16.3349 9.77996 16.22L6.17276 12.6127C5.94241 12.3825 5.94241 12.0102 6.17276 11.78C6.40299 11.5498 6.77514 11.5498 7.00549 11.78L10.1963 14.9708L16.9946 8.17268C17.2248 7.94244 17.597 7.94244 17.8273 8.17268C18.0575 8.40302 18.0575 8.77517 17.8273 9.00551L10.6128 16.22C10.4979 16.3349 10.3471 16.3926 10.1963 16.3926Z"
-                          fill="#F6F6F6" />
-                      </svg>
-                      <span class="filter__checkbox-text">Dr Pepper</span>
-                    </label>
-                  </a>
-                </li>
+                <label class="filter__price-label filter__price-label--from">
+                  <input class="filter__price-input filter__price-input--from" type="text" value="0">
+                </label>
 
-              </ul>
-            </div>
+                <label class="filter__price-label filter__price-label--to">
+                  <input class="filter__price-input filter__price-input--to" type="text" name="price-input" value="0">
+                </label>
 
-            <div class="filter__price spacer">
-              <button class="filter__btn filter__btn--price">
-                Цена
-              </button>
-
-
-              <div class="filter__price-wrapper">
-
-                <div class="filter__price-display">
-
-                  <label class="filter__price-label filter__price-label--from">
-                    <input class="filter__price-input filter__price-input--from" type="text" value="0">
-                  </label>
-
-                  <label class="filter__price-label filter__price-label--to">
-                    <input class="filter__price-input filter__price-input--to" type="text" name="price-input" value="0">
-                  </label>
-
-                </div>
-
-                <input class="filter__price-slider" type="text" name="input-price" name="price-input" value="">
               </div>
+
+              <input class="filter__price-slider" type="text" name="input-price" name="price-input" value="">
             </div>
-          </aside>
-          <div class="content-blure"></div>
+          </section>
+        </div>
 
-          <div class="catalog-content">
+        <section class="catalog">
+          <h2 class="sr-only">
+            Наши товары
+          </h2>
 
-            <div class="catalog-content__filter">
-
-              <button class="mobile-filter">
-                <svg class="mobile-filter__icon" width="32" height="36" viewBox="0 0 32 36" fill="none">
-                  <g>
-                  <path d="M13.7804 28.1251H1.13878C0.510161 28.1251 9.68073e-07 28.6291 9.95549e-07 29.2501C1.02303e-06 29.8711 0.510218 30.3751 1.13878 30.3751H13.7803C14.3076 32.9423 16.6046 34.8751 19.3593 34.8751C22.114 34.8751 24.4108 32.9423 24.938 30.3751H30.7469C31.3755 30.3751 31.8857 29.8711 31.8857 29.2501C31.8857 28.6291 31.3755 28.1251 30.7469 28.1251H24.9383C24.411 25.5578 22.114 23.6251 19.3593 23.6251C16.6047 23.6251 14.3076 25.5578 13.7804 28.1251ZM22.7755 29.2501C22.7755 31.1142 21.2463 32.6251 19.3593 32.6251C17.4723 32.6251 15.9429 31.1142 15.9429 29.2501C15.9429 27.3859 17.4723 25.8751 19.3593 25.8751C21.2463 25.8751 22.7755 27.3859 22.7755 29.2501ZM2.39261 16.875H1.13878C0.510161 16.875 4.70298e-07 17.3791 4.97775e-07 18C5.25251e-07 18.621 0.510161 19.125 1.13878 19.125H2.39255C2.9198 21.6923 5.21671 23.6251 7.97145 23.6251C10.7262 23.6251 13.023 21.6923 13.5503 19.125H30.7469C31.3755 19.125 31.8857 18.621 31.8857 18C31.8857 17.379 31.3755 16.875 30.7469 16.875H13.5503C13.0231 14.3078 10.7262 12.375 7.9715 12.375C5.21682 12.375 2.91984 14.3078 2.39261 16.875ZM11.3878 18C11.3878 19.8642 9.8584 21.375 7.97145 21.375C6.08448 21.375 4.5551 19.8642 4.5551 18C4.5551 16.1359 6.08448 14.625 7.97145 14.625C9.8584 14.625 11.3878 16.1359 11.3878 18ZM18.3355 5.62502H1.13878C0.510161 5.62502 -2.74764e-08 6.12906 0 6.75001C2.74741e-08 7.37097 0.510161 7.87501 1.13878 7.87501H18.3355C18.8627 10.4423 21.1597 12.375 23.9143 12.375C26.669 12.375 28.9659 10.4423 29.4931 7.87501H30.7469C31.3755 7.87501 31.8857 7.37097 31.8857 6.75001C31.8857 6.12906 31.3755 5.62502 30.7469 5.62502H29.4931C28.9659 3.05774 26.669 1.125 23.9143 1.125C21.1597 1.125 18.8628 3.05774 18.3355 5.62502ZM27.3306 6.75001C27.3306 8.61414 25.8012 10.125 23.9143 10.125C22.0274 10.125 20.498 8.61414 20.498 6.75001C20.498 4.88587 22.0274 3.37499 23.9143 3.37499C25.8012 3.37499 27.3306 4.88587 27.3306 6.75001Z" fill="#C1C1C1"/>
-                  </g>
-                  <defs>
+          <div class="catalog__filter filter-catalog">
+            <button class="mobile-filter" type="button" aria-label="Открыть блок фильтров">
+              <svg class="mobile-filter__icon" width="32" height="36" viewBox="0 0 32 36" fill="none">
+                <g>
+                  <path
+                    d="M13.7804 28.1251H1.13878C0.510161 28.1251 9.68073e-07 28.6291 9.95549e-07 29.2501C1.02303e-06 29.8711 0.510218 30.3751 1.13878 30.3751H13.7803C14.3076 32.9423 16.6046 34.8751 19.3593 34.8751C22.114 34.8751 24.4108 32.9423 24.938 30.3751H30.7469C31.3755 30.3751 31.8857 29.8711 31.8857 29.2501C31.8857 28.6291 31.3755 28.1251 30.7469 28.1251H24.9383C24.411 25.5578 22.114 23.6251 19.3593 23.6251C16.6047 23.6251 14.3076 25.5578 13.7804 28.1251ZM22.7755 29.2501C22.7755 31.1142 21.2463 32.6251 19.3593 32.6251C17.4723 32.6251 15.9429 31.1142 15.9429 29.2501C15.9429 27.3859 17.4723 25.8751 19.3593 25.8751C21.2463 25.8751 22.7755 27.3859 22.7755 29.2501ZM2.39261 16.875H1.13878C0.510161 16.875 4.70298e-07 17.3791 4.97775e-07 18C5.25251e-07 18.621 0.510161 19.125 1.13878 19.125H2.39255C2.9198 21.6923 5.21671 23.6251 7.97145 23.6251C10.7262 23.6251 13.023 21.6923 13.5503 19.125H30.7469C31.3755 19.125 31.8857 18.621 31.8857 18C31.8857 17.379 31.3755 16.875 30.7469 16.875H13.5503C13.0231 14.3078 10.7262 12.375 7.9715 12.375C5.21682 12.375 2.91984 14.3078 2.39261 16.875ZM11.3878 18C11.3878 19.8642 9.8584 21.375 7.97145 21.375C6.08448 21.375 4.5551 19.8642 4.5551 18C4.5551 16.1359 6.08448 14.625 7.97145 14.625C9.8584 14.625 11.3878 16.1359 11.3878 18ZM18.3355 5.62502H1.13878C0.510161 5.62502 -2.74764e-08 6.12906 0 6.75001C2.74741e-08 7.37097 0.510161 7.87501 1.13878 7.87501H18.3355C18.8627 10.4423 21.1597 12.375 23.9143 12.375C26.669 12.375 28.9659 10.4423 29.4931 7.87501H30.7469C31.3755 7.87501 31.8857 7.37097 31.8857 6.75001C31.8857 6.12906 31.3755 5.62502 30.7469 5.62502H29.4931C28.9659 3.05774 26.669 1.125 23.9143 1.125C21.1597 1.125 18.8628 3.05774 18.3355 5.62502ZM27.3306 6.75001C27.3306 8.61414 25.8012 10.125 23.9143 10.125C22.0274 10.125 20.498 8.61414 20.498 6.75001C20.498 4.88587 22.0274 3.37499 23.9143 3.37499C25.8012 3.37499 27.3306 4.88587 27.3306 6.75001Z"
+                    fill="#C1C1C1" />
+                </g>
+                <defs>
                   <clipPath id="clip0">
-                  <rect width="31.8857" height="36" fill="white"/>
+                    <rect width="31.8857" height="36" fill="white" />
                   </clipPath>
-                  </defs>
-                </svg>
-                  
-              </button>
+                </defs>
+              </svg>
+            </button>
 
-              <select class="catalog-content__filter-sort select-style" name="filter-sort"
+            <div class="filter-catalog__order order-catalog">
+              <select class="order-catalog__sort select-style" name="filter-sort"
                 aria-label="Выбрать тип сортировки карточек продуктов">
                 <option>По названию</option>
                 <option>По популярности</option>
@@ -722,7 +707,7 @@
                 <option>По алфавиту</option>
               </select>
 
-              <select class="catalog-content__filter-show select-style" name="filter-show"
+              <select class="order-catalog__show select-style" name="filter-show"
                 aria-label="Выбрать количество карточек продуктов">
                 <option>по 12</option>
                 <option>по 18</option>
@@ -730,9 +715,11 @@
                 <option>по 30</option>
                 <option>по 36</option>
               </select>
+            </div>
 
-              <button class="catalog-content__view-btn catalog-content__view-btn--list"
-                aria-label="Переключить на крупную плитку" title="Переключить на крупную плитку">
+            <div class="filter-catalog__view view-catalog">
+              <button class="view-catalog__btn view-catalog__btn--list" aria-label="Переключить на крупную плитку"
+                title="Переключить на крупную плитку">
                 <svg width="47" height="47" viewBox="0 0 47 47" fill="none">
                   <rect width="47" height="47" rx="3" fill="#F6F6F6" />
                   <path
@@ -756,9 +743,7 @@
                 </svg>
               </button>
 
-              <button
-                class="catalog-content__view-btn catalog-content__view-btn--grid catalog-content__view-btn--active"
-                aria-label="Переключить на мелкую плитку" title="Переключить на мелкую плитку">
+              <button class="view-catalog__btn view-catalog__btn--grid view-catalog__btn--active" aria-label="Переключить на мелкую плитку" title="Переключить на мелкую плитку">
                 <svg width="47" height="47" viewBox="0 0 47 47" fill="none">
                   <rect width="47" height="47" rx="3" fill="#F6F6F6" />
                   <path
@@ -791,692 +776,698 @@
                 </svg>
               </button>
             </div>
+          </div>
 
-            <div class="catalog-content__inner">
-              <ul class="catalog-content__list">
-                <li class="catalog-content__item">
-                  <article class="product-card">
+          <ul class="catalog__list">
+              <li class="catalog__item">
+                <article class="product-card">
 
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--new">
-                        Новинка
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--new">
+                      Новинка
+                    </span>
+                    <span class="product-card__badge product-card__badge--sale">
+                      -50%
+                    </span>
+                  </div>
+
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
+
+                  <a href="#" class="product-card__link">
+                    <img class="product-card__image" src="images/product-card/pineapple.jpg" alt="Фото ананаса"
+                      width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
+
+
+                  <div class="product-card__bottom">
+
+                    <div class="product-card__info">
+
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
+                      </p>
+
+                      <span class="product-card__rating">
+                        4.5
                       </span>
-                      <span class="product-card__badge product-card__badge--sale">
-                        -50%
+
+                    </div>
+
+                    <h3 class="product-card__name">
+                      Ананас, 1кг
+                    </h3>
+
+                    <p class="product-card__offers">
+                      <span class="product-card__price product-card__price--old">
+                        1999 ₽
                       </span>
-                    </div>
-
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
-
-                    <a href="#" class="product-card__link">
-                      <img class="product-card__image" src="images/product-card/pineapple.jpg" alt="Фото ананаса"
-                        width="300" height="225">
-                      <div class="product-card__icon"></div>              
-                    </a>
-
-
-                    <div class="product-card__bottom">
-
-                      <div class="product-card__info">
-
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
-
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
-
-                      </div>
-
-                      <h3 class="product-card__name">
-                        Ананас, 1кг
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price product-card__price--old">
-                          1999 ₽
-                        </span>
-                        <span class="product-card__price product-card__price--new">
-                          999 ₽
-                        </span>
-                      </p>
-
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
-
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/lemon.jpg" alt="Фото лимона" width="300"
-                        height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
-
-
-                    <div class="product-card__bottom">
-
-                      <div class="product-card__info">
-
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
-
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
-
-                      </div>
-
-                      <h3 class="product-card__name">
-                        Лимон, 1кг
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          999 ₽
-                        </span>
-                      </p>
-
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--hit">
-                        Хит
+                      <span class="product-card__price product-card__price--new">
+                        999 ₽
                       </span>
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
+                    </p>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
-                        width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="catalog__item">
+                <article class="product-card">
+
+                  <div class="product-card__badges">
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
+
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/lemon.jpg" alt="Фото лимона" width="300"
+                      height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
 
 
-                    <div class="product-card__bottom">
+                  <div class="product-card__bottom">
 
-                      <div class="product-card__info">
+                    <div class="product-card__info">
 
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
-
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
-
-                      </div>
-
-                      <h3 class="product-card__name">
-                        Питахайя красная с белой мякотью, 1шт
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          1019 ₽
-                        </span>
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
                       </p>
 
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--new">
-                        Новинка
+                      <span class="product-card__rating">
+                        4.5
                       </span>
+
                     </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
-                        width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
+                    <h3 class="product-card__name">
+                      Лимон, 1кг
+                    </h3>
 
-                    <div class="product-card__bottom">
-
-                      <div class="product-card__info">
-
-                        <p class="product-card__status product-card__status--ended">
-                          Нет в наличии
-                        </p>
-
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
-
-                      </div>
-
-                      <h3 class="product-card__name">
-                        Перец оранжевый, 1кг
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          349 ₽
-                        </span>
-                      </p>
-
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--hit">
-                        Хит
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        999 ₽
                       </span>
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
+                    </p>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/carrot.jpg" alt="Фото молодой моркови"
-                        width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
 
-                    <div class="product-card__bottom">
+                </article>
+              </li>
 
-                      <div class="product-card__info">
+              <li class="catalog__item">
+                <article class="product-card">
 
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--hit">
+                      Хит
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
 
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
+                      width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
 
-                      </div>
 
-                      <h3 class="product-card__name">
-                        Морковь молодая с бабушкиной грядки, 1кг
-                      </h3>
+                  <div class="product-card__bottom">
 
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          49 ₽
-                        </span>
+                    <div class="product-card__info">
+
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
                       </p>
 
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--sale">
-                        -30%
+                      <span class="product-card__rating">
+                        4.5
                       </span>
+
                     </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/juice.jpg"
-                        alt="Фото сокосодержащего напитка Sanpellegrino Aranciata Orange" width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
+                    <h3 class="product-card__name">
+                      Питахайя красная с белой мякотью, 1шт
+                    </h3>
 
-                    <div class="product-card__bottom">
-
-                      <div class="product-card__info">
-
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
-
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
-
-                      </div>
-
-                      <h3 class="product-card__name">
-                        Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price product-card__price--old">
-                          299 ₽
-                        </span>
-                        <span class="product-card__price product-card__price--new">
-                          199 ₽
-                        </span>
-                      </p>
-
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--new">
-                        Новинка
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        1019 ₽
                       </span>
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
+                    </p>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/coffee.jpg"
-                        alt="Фото кофе с коноплей органический Caffé Salomoni" width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
 
-                    <div class="product-card__bottom">
+                </article>
+              </li>
 
-                      <div class="product-card__info">
+              <li class="catalog__item">
+                <article class="product-card">
 
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--new">
+                      Новинка
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
 
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
+                      width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
 
-                      </div>
+                  <div class="product-card__bottom">
 
-                      <h3 class="product-card__name">
-                        Кофе с коноплей органический Caffé Salomoni 250г
-                      </h3>
+                    <div class="product-card__info">
 
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          877 ₽
-                        </span>
+                      <p class="product-card__status product-card__status--ended">
+                        Нет в наличии
                       </p>
 
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
-
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/ketchup.jpg"
-                        alt="Фото кетчуп томатный детский органический Bio-Zentrale" width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
-
-                    <div class="product-card__bottom">
-
-                      <div class="product-card__info">
-
-                        <p class="product-card__status product-card__status--ends">
-                          Заканчивается
-                        </p>
-
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
-
-                      </div>
-
-                      <h3 class="product-card__name">
-                        Кетчуп томатный детский органический Bio-Zentrale 500мл
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          600 ₽
-                        </span>
-                      </p>
-
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--hit">
-                        Хит
+                      <span class="product-card__rating">
+                        4.5
                       </span>
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
-                        width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
-
-
-                    <div class="product-card__bottom">
-
-                      <div class="product-card__info">
-
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
-
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
-
-                      </div>
-
-                      <h3 class="product-card__name">
-                        Питахайя красная с белой мякотью, 1шт
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          1019 ₽
-                        </span>
-                      </p>
-
-                      <button class="product-card__buy-btn" type="button"></button>
                     </div>
 
-                  </article>
-                </li>
+                    <h3 class="product-card__name">
+                      Перец оранжевый, 1кг
+                    </h3>
 
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--new">
-                        Новинка
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        349 ₽
                       </span>
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
+                    </p>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
-                        width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+                </article>
+              </li>
 
-                    <div class="product-card__bottom">
+              <li class="catalog__item">
 
-                      <div class="product-card__info">
+                <article class="product-card">
 
-                        <p class="product-card__status product-card__status--ends">
-                          Заканчивается
-                        </p>
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--hit">
+                      Хит
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
 
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/carrot.jpg" alt="Фото молодой моркови"
+                      width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
 
-                      </div>
+                  <div class="product-card__bottom">
 
-                      <h3 class="product-card__name">
-                        Перец оранжевый, 1кг
-                      </h3>
+                    <div class="product-card__info">
 
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          349 ₽
-                        </span>
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
                       </p>
 
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-                  </article>
-                </li>
-
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--hit">
-                        Хит
+                      <span class="product-card__rating">
+                        4.5
                       </span>
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
-                        width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
-
-
-                    <div class="product-card__bottom">
-
-                      <div class="product-card__info">
-
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
-
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
-
-                      </div>
-
-                      <h3 class="product-card__name">
-                        Питахайя красная с белой мякотью, 1шт
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          1019 ₽
-                        </span>
-                      </p>
-
-                      <button class="product-card__buy-btn" type="button"></button>
                     </div>
 
-                  </article>
-                </li>
+                    <h3 class="product-card__name">
+                      Морковь молодая с бабушкиной грядки, 1кг
+                    </h3>
 
-                <li class="catalog-content__item">
-                  <article class="product-card">
-
-                    <div class="product-card__badges">
-                      <span class="product-card__badge product-card__badge--new">
-                        Новинка
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        49 ₽
                       </span>
-                    </div>
-                    <button class="product-card__like" type="button" aria-label="Добавить в избранное">
-                      <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                          fill="#C1C1C1" />
-                      </svg>
-                    </button>
+                    </p>
 
-                    <a class="product-card__link" href="#">
-                      <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
-                        width="300" height="225">
-                        <div class="product-card__icon"></div>    
-                    </a>
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+                </article>
+              </li>
 
-                    <div class="product-card__bottom">
+              <li class="catalog__item">
+                <article class="product-card">
 
-                      <div class="product-card__info">
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--sale">
+                      -30%
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
 
-                        <p class="product-card__status product-card__status--in-stock">
-                          В наличии
-                        </p>
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/juice.jpg"
+                      alt="Фото сокосодержащего напитка Sanpellegrino Aranciata Orange" width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
 
-                        <span class="product-card__rating">
-                          4.5
-                        </span>
+                  <div class="product-card__bottom">
 
-                      </div>
+                    <div class="product-card__info">
 
-                      <h3 class="product-card__name">
-                        Перец оранжевый, 1кг
-                      </h3>
-
-                      <p class="product-card__offers">
-                        <span class="product-card__price">
-                          349 ₽
-                        </span>
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
                       </p>
 
-                      <button class="product-card__buy-btn" type="button"></button>
-                    </div>
-                  </article>
-                </li>
-              </ul>
+                      <span class="product-card__rating">
+                        4.5
+                      </span>
 
-              <div class="catalog-content__bottom">
-                <a class="btn catalog-content__btn" href="#">
-                  Показать еще
+                    </div>
+
+                    <h3 class="product-card__name">
+                      Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный
+                    </h3>
+
+                    <p class="product-card__offers">
+                      <span class="product-card__price product-card__price--old">
+                        299 ₽
+                      </span>
+                      <span class="product-card__price product-card__price--new">
+                        199 ₽
+                      </span>
+                    </p>
+
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="catalog__item">
+                <article class="product-card">
+
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--new">
+                      Новинка
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
+
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/coffee.jpg"
+                      alt="Фото кофе с коноплей органический Caffé Salomoni" width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
+
+                  <div class="product-card__bottom">
+
+                    <div class="product-card__info">
+
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
+                      </p>
+
+                      <span class="product-card__rating">
+                        4.5
+                      </span>
+
+                    </div>
+
+                    <h3 class="product-card__name">
+                      Кофе с коноплей органический Caffé Salomoni 250г
+                    </h3>
+
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        877 ₽
+                      </span>
+                    </p>
+
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="catalog__item">
+                <article class="product-card">
+
+                  <div class="product-card__badges">
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
+
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/ketchup.jpg"
+                      alt="Фото кетчуп томатный детский органический Bio-Zentrale" width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
+
+                  <div class="product-card__bottom">
+
+                    <div class="product-card__info">
+
+                      <p class="product-card__status product-card__status--ends">
+                        Заканчивается
+                      </p>
+
+                      <span class="product-card__rating">
+                        4.5
+                      </span>
+
+                    </div>
+
+                    <h3 class="product-card__name">
+                      Кетчуп томатный детский органический Bio-Zentrale 500мл
+                    </h3>
+
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        600 ₽
+                      </span>
+                    </p>
+
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="catalog__item">
+                <article class="product-card">
+
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--hit">
+                      Хит
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
+
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
+                      width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
+
+
+                  <div class="product-card__bottom">
+
+                    <div class="product-card__info">
+
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
+                      </p>
+
+                      <span class="product-card__rating">
+                        4.5
+                      </span>
+
+                    </div>
+
+                    <h3 class="product-card__name">
+                      Питахайя красная с белой мякотью, 1шт
+                    </h3>
+
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        1019 ₽
+                      </span>
+                    </p>
+
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="catalog__item">
+                <article class="product-card">
+
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--new">
+                      Новинка
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
+
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
+                      width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
+
+                  <div class="product-card__bottom">
+
+                    <div class="product-card__info">
+
+                      <p class="product-card__status product-card__status--ends">
+                        Заканчивается
+                      </p>
+
+                      <span class="product-card__rating">
+                        4.5
+                      </span>
+
+                    </div>
+
+                    <h3 class="product-card__name">
+                      Перец оранжевый, 1кг
+                    </h3>
+
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        349 ₽
+                      </span>
+                    </p>
+
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="catalog__item">
+                <article class="product-card">
+
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--hit">
+                      Хит
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
+
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/dragon-fruit.jpg" alt="Фото питахаи"
+                      width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
+
+
+                  <div class="product-card__bottom">
+
+                    <div class="product-card__info">
+
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
+                      </p>
+
+                      <span class="product-card__rating">
+                        4.5
+                      </span>
+
+                    </div>
+
+                    <h3 class="product-card__name">
+                      Питахайя красная с белой мякотью, 1шт
+                    </h3>
+
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        1019 ₽
+                      </span>
+                    </p>
+
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="catalog__item">
+                <article class="product-card">
+
+                  <div class="product-card__badges">
+                    <span class="product-card__badge product-card__badge--new">
+                      Новинка
+                    </span>
+                  </div>
+                  <button class="product-card__like" type="button" aria-label="Добавить в избранное">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                        fill="#C1C1C1" />
+                    </svg>
+                  </button>
+
+                  <a class="product-card__link" href="#">
+                    <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Фото оренжевого перца"
+                      width="300" height="225">
+                    <div class="product-card__icon"></div>
+                  </a>
+
+                  <div class="product-card__bottom">
+
+                    <div class="product-card__info">
+
+                      <p class="product-card__status product-card__status--in-stock">
+                        В наличии
+                      </p>
+
+                      <span class="product-card__rating">
+                        4.5
+                      </span>
+
+                    </div>
+
+                    <h3 class="product-card__name">
+                      Перец оранжевый, 1кг
+                    </h3>
+
+                    <p class="product-card__offers">
+                      <span class="product-card__price">
+                        349 ₽
+                      </span>
+                    </p>
+
+                    <button class="product-card__buy-btn" type="button"></button>
+                  </div>
+                </article>
+              </li>
+          </ul>
+
+            <div class="catalog__bottom">
+              <button class="btn catalog__btn" type="button" aria-label="Показать еще товары">
+                Показать еще
+              </button>
+
+              <div class="pagination">
+                <a class="pagination__arrow pagination__arrow--prew pagination__link" aria-label="Вернуться на преведущую страницу">
+                  <svg class="pagination__icon pagination__icon--pref" width="18" height="11" viewBox="0 0 18 11"
+                    fill="none">
+                    <path
+                      d="M8.42911 0.700317L0.220559 9.70779C-0.0735198 10.0034 -0.0735198 10.4827 0.220559 10.7783C0.514615 11.0739 0.991755 11.0739 1.28583 10.7783L9.00002 2.31396L16.7142 10.7776C17.0083 11.0731 17.4854 11.0731 17.7795 10.7776C18.0735 10.482 18.0735 10.0026 17.7795 9.70706L9.57091 0.699566C9.41414 0.542028 9.20631 0.474486 9.00077 0.485008C8.79446 0.475213 8.58665 0.542733 8.42911 0.700317Z"
+                      fill="#C1C1C1" />
+                  </svg>
                 </a>
+                <ul class="pagination__list">
 
-                <div class="pagination">
-                  <a class="pagination__arrow pagination__arrow--prew pagination__link" href="#" aria-label="Вернуться на преведущую страницу">
-                    <svg class="pagination__icon pagination__icon--pref" width="18" height="11" viewBox="0 0 18 11" fill="none">
-                      <path d="M8.42911 0.700317L0.220559 9.70779C-0.0735198 10.0034 -0.0735198 10.4827 0.220559 10.7783C0.514615 11.0739 0.991755 11.0739 1.28583 10.7783L9.00002 2.31396L16.7142 10.7776C17.0083 11.0731 17.4854 11.0731 17.7795 10.7776C18.0735 10.482 18.0735 10.0026 17.7795 9.70706L9.57091 0.699566C9.41414 0.542028 9.20631 0.474486 9.00077 0.485008C8.79446 0.475213 8.58665 0.542733 8.42911 0.700317Z" fill="#C1C1C1"/>
-                    </svg>
-                  </a>
-                  <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link--active">
+                      1
+                    </a>
+                  </li>
 
-                    <li class="pagination__item">
-                      <a class="pagination__link pagination__link--active" href="#">
-                        1
-                      </a>
-                    </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">
+                      2
+                    </a>
+                  </li>
 
-                    <li class="pagination__item">
-                      <a class="pagination__link" href="#">
-                        2
-                      </a>
-                    </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">
+                      ...
+                    </a>
+                  </li>
 
-                    <li class="pagination__item">
-                      <a class="pagination__link" href="#">
-                        ...
-                      </a>
-                    </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">
+                      9
+                    </a>
+                  </li>
 
-                    <li class="pagination__item">
-                      <a class="pagination__link" href="#">
-                        9
-                      </a>
-                    </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">
+                      10
+                    </a>
+                  </li>
 
-                    <li class="pagination__item">
-                      <a class="pagination__link" href="#">
-                        10
-                      </a>
-                    </li>
-
-                  </ul>
-                  <a class="pagination__arrow pagination__arrow--next pagination__link" href="#" aria-label="Перйти к следующей странице">
-                    <svg class="pagination__icon pagination__icon--next" width="18" height="11" viewBox="0 0 18 11" fill="none">
-                      <path d="M8.42911 0.700317L0.220559 9.70779C-0.0735198 10.0034 -0.0735198 10.4827 0.220559 10.7783C0.514615 11.0739 0.991755 11.0739 1.28583 10.7783L9.00002 2.31396L16.7142 10.7776C17.0083 11.0731 17.4854 11.0731 17.7795 10.7776C18.0735 10.482 18.0735 10.0026 17.7795 9.70706L9.57091 0.699566C9.41414 0.542028 9.20631 0.474486 9.00077 0.485008C8.79446 0.475213 8.58665 0.542733 8.42911 0.700317Z" fill="#C1C1C1"/>
-                    </svg>
-                  </a>
-                </div>
+                </ul>
+                <a class="pagination__arrow pagination__arrow--next pagination__link" href="#"
+                  aria-label="Перйти к следующей странице">
+                  <svg class="pagination__icon pagination__icon--next" width="18" height="11" viewBox="0 0 18 11"
+                    fill="none">
+                    <path
+                      d="M8.42911 0.700317L0.220559 9.70779C-0.0735198 10.0034 -0.0735198 10.4827 0.220559 10.7783C0.514615 11.0739 0.991755 11.0739 1.28583 10.7783L9.00002 2.31396L16.7142 10.7776C17.0083 11.0731 17.4854 11.0731 17.7795 10.7776C18.0735 10.482 18.0735 10.0026 17.7795 9.70706L9.57091 0.699566C9.41414 0.542028 9.20631 0.474486 9.00077 0.485008C8.79446 0.475213 8.58665 0.542733 8.42911 0.700317Z"
+                      fill="#C1C1C1" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
-        </div>
+        </section>
+        <div class="content-blur"></div>
       </div>
-    </section>
+    </div>
 
   </main>
 
