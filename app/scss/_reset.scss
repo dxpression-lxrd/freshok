@@ -55,7 +55,8 @@ a {
 
 button,
 input,
-fieldset {
+fieldset,
+textarea {
   border: none;
 }
 
@@ -67,4 +68,8 @@ button {
 
 address {
   font-style: normal;
+}
+
+svg:not(:root) {
+  overflow: visible;
 }

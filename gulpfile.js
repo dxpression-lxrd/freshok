@@ -35,6 +35,9 @@ function scripts() {
   return src([
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
+    'node_modules/remodal/dist/remodal.min.js',
+    'node_modules/focus-visible/dist/focus-visible.min.js',
     'app/js/main.js'
   ])
   .pipe (concat('main.min.js'))
